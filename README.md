@@ -1,5 +1,7 @@
 # SEO Research: Immobilienmakler Metropolregion Nürnberg (ER / N / FÜ)
 
+> **Hinweis:** Die vollständige Content-Strategie befindet sich in [SEO_CONTENT_STRATEGY.md](./SEO_CONTENT_STRATEGY.md)
+
 Dieses Repository enthält eine Analyse der Wettbewerber für **WEID Immobilien** im Raum Erlangen, Nürnberg und Fürth.
 
 ## Wettbewerber-Analyse
@@ -31,7 +33,35 @@ Dieses Repository enthält eine Analyse der Wettbewerber für **WEID Immobilien*
     *   S-ImmoPreisfinder (Eigengewächs/White-Label).
     *   Eigene Suchmaske mit Anbindung an LBS/Sparkassen-Bestand.
 
-### 3. Schultheiss Wohnbau AG (Nürnberg/Erlangen)
+### 3. Grüske Immobilien (Erlangen)
+*   **Website:** [grueske-immobilien.de](https://www.grueske-immobilien.de/)
+*   **Fokus:** Traditioneller Familienbetrieb, Verkauf & Bewertung.
+*   **USP:** "Seit 1966" – starkes Vertrauenssignal durch lange Marktpräsenz.
+*   **Seitenstruktur:**
+    *   Startseite mit aktuellem Angebot.
+    *   Leistungsseiten (Verkauf, Wertermittlung).
+    *   FAQ-Bereich (gut für SEO!).
+    *   Video-Content direkt auf der Startseite.
+*   **Schwächen:** Veraltetes Design, keine Stadtteil-Seiten, kein Blog.
+
+### 4. DAHLER Erlangen/Fürth
+*   **Website:** [dahlercompany.com](https://www.dahlercompany.com/de/immobilienmakler/wohnimmobilien/bayern/erlangen-fuerth)
+*   **Fokus:** Premium-Segment (Villen, Luxusimmobilien).
+*   **Seitenstruktur:**
+    *   Regionale Landing Page mit Stadtbeschreibung.
+    *   Stadtteil-Infos integriert (Burgberg, Sieglitzhof, Tennenlohe, Frauenaurach).
+    *   Marktdaten-Sektion als Lead-Magnet.
+    *   Team-Vorstellung mit Fotos.
+    *   Testimonials ("Käufer nach 4 Wochen gefunden").
+*   **Keywords:** "hochwertige Immobilien", "Villa Erlangen", "Luxusimmobilie".
+*   **Stärke:** Internationales Netzwerk, Diskretion als USP.
+
+### 5. Müller & Müller Immobilien (Erlangen)
+*   **Website:** [m-m-immo.de](https://m-m-immo.de/)
+*   **Fokus:** Klassische Maklerleistungen für Wohn- und Gewerbeimmobilien.
+*   **Besonderheit:** Mitglied der "Nürnberger Immobilienbörse" (Netzwerk von 40+ Maklern).
+
+### 6. Schultheiss Wohnbau AG (Nürnberg/Erlangen)
 *   **Website:** [schultheiss-wohnbau.de](https://www.schultheiss-wohnbau.de/)
 *   **Fokus:** Bauträger & Projektentwicklung (Neubau).
 *   **Seitenstruktur:**
@@ -85,4 +115,24 @@ Bei einer Suche nach den oben genannten Keywords dominieren aktuell folgende Anb
 2.  **Siemens-Kontext:** Da viele Zuzügler wegen Siemens kommen, sollten Keywords wie "Siemensnähe" oder "Healthineers Campus Anbindung" aktiv in Objektbeschreibungen genutzt werden.
 3.  **Schnelligkeit:** Die Wettbewerber-Seiten sind teilweise technisch veraltet (langsame Ladezeiten). Mit einem schnellen Next.js Frontend wird WEID einen Ranking-Vorteil bei den Core Web Vitals haben.
 
-*Hinweis: Screenshots konnten aufgrund technischer Einschränkungen des Browsers nicht direkt erstellt werden. Beschreibungen basieren auf der Analyse der Live-Seitenstruktur.*
+### Weitere relevante Wettbewerber
+*   **Von Poll Immobilien** – Premium-Segment, deutschlandweites Franchise.
+*   **Century 21 DH Immobilien Erlangen** – Amerikanische Franchise-Kette mit lokalem Büro.
+*   **Immopartner Nürnberg** – Starke Content-Strategie mit Ratgeber-Artikeln.
+*   **IMMOsmile GmbH** – Fokus auf kompakte Ratgeber und lokale Tipps.
+*   **GARANT Immobilien** – Eines der führenden Maklernetzwerke in Süddeutschland.
+*   **Stielke Immobilien** – Lokaler Makler in Erlangen.
+
+---
+
+## Fehlende Seitenstrukturen bei Wettbewerbern
+
+Die meisten Wettbewerber haben folgende Lücken, die WEID Immobilien besetzen kann:
+
+1. **Stadtteil-Seiten:** Fast niemand hat dedizierte Seiten für Tennenlohe, Sieglitzhof, Burgberg etc.
+2. **Siemens/Healthineers-Kontext:** Obwohl viele Tech-Mitarbeiter nach Erlangen ziehen, wird das Thema nicht adressiert.
+3. **Interaktive Bewertungstools:** Die meisten haben nur Kontaktformulare, keine echten Online-Rechner.
+4. **Video-Content:** Nur Grüske nutzt Video, die anderen nicht.
+5. **Marktberichte als PDF-Download:** Wird kaum als Lead-Magnet genutzt.
+
+*Hinweis: Detaillierte Content-Strategie mit Zeitplan: [SEO_CONTENT_STRATEGY.md](./SEO_CONTENT_STRATEGY.md)*
