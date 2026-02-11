@@ -4,6 +4,7 @@
 > - 📋 [IMPLEMENTATION_STAGES.md](./IMPLEMENTATION_STAGES.md) – **Phasenplan mit Stunden-Kalkulation**
 > - 📊 [SEO_CONTENT_STRATEGY.md](./SEO_CONTENT_STRATEGY.md) – Vollständige Content-Strategie
 > - 🗺️ [SITEMAP_ARCHITECTURE.md](./SITEMAP_ARCHITECTURE.md) – Website-Struktur als Flowchart
+> - 🔗 [BACKLINK_STRATEGY.md](./BACKLINK_STRATEGY.md) – Backlink-Quellen & Verzeichnisse
 
 Dieses Repository enthält eine Analyse der Wettbewerber für **WEID Immobilien** im Raum Erlangen, Nürnberg und Fürth.
 
