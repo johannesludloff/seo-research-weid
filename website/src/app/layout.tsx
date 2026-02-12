@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -16,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "WEID Immobilien | Erlangen",
-  description: "Editorial real estate wireframe for WEID Immobilien."
+  description: "Ihr lokaler Immobilienmakler in Erlangen. Verkauf, Bewertung und persönliche Beratung.",
 };
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="de">
       <body className={`${cormorant.variable} ${inter.variable} font-body`}>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

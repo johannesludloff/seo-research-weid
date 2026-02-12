@@ -5,9 +5,11 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#services", label: "Services" },
-  { href: "#contact", label: "Kontakt" },
+  { href: "/verkaufen", label: "Verkaufen" },
+  { href: "/immobilien", label: "Immobilien" },
+  { href: "/wertermittlung", label: "Wertermittlung" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export function MobileNav() {

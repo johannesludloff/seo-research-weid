@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
@@ -24,17 +25,20 @@ export default function Home() {
     <main className="bg-ivory text-noir">
       <header className="px-6 py-8 md:px-14">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <div className="font-display text-2xl tracking-wide">WEID Immobilien</div>
+          <Link href="/" className="font-display text-2xl tracking-wide">WEID Immobilien</Link>
           <nav className="hidden items-center gap-8 text-xs font-medium uppercase tracking-[0.18em] md:flex">
-            <a className="transition-colors hover:text-espresso" href="#portfolio">
-              Portfolio
-            </a>
-            <a className="transition-colors hover:text-espresso" href="#services">
-              Services
-            </a>
-            <a className="transition-colors hover:text-espresso" href="#contact">
+            <Link className="transition-colors hover:text-espresso" href="/verkaufen">
+              Verkaufen
+            </Link>
+            <Link className="transition-colors hover:text-espresso" href="/immobilien">
+              Immobilien
+            </Link>
+            <Link className="transition-colors hover:text-espresso" href="/wertermittlung">
+              Wertermittlung
+            </Link>
+            <Link className="transition-colors hover:text-espresso" href="/kontakt">
               Kontakt
-            </a>
+            </Link>
           </nav>
           <MobileNav />
         </div>
@@ -107,7 +111,9 @@ export default function Home() {
               Substanz vor Lautstärke stellt.
             </p>
             <div className="mt-10">
-              <Button variant="outline">Portfolio anfragen</Button>
+              <Button variant="outline" asChild>
+                <Link href="/immobilien">Alle Objekte ansehen</Link>
+              </Button>
             </div>
           </Reveal>
           <Reveal className="overflow-hidden">
@@ -157,8 +163,8 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal className="flex items-end">
-            <Button className="w-full" variant="outline">
-              Gespräch vereinbaren
+            <Button className="w-full" variant="outline" asChild>
+              <Link href="/kontakt">Gespräch vereinbaren</Link>
             </Button>
           </Reveal>
         </div>
@@ -166,14 +172,14 @@ export default function Home() {
 
       <footer className="bg-noir px-6 py-10 text-ivory md:px-14">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 border-t border-ivory/20 pt-8 text-xs uppercase tracking-[0.2em] md:flex-row md:items-center md:justify-between">
-          <span>WEID Immobilien · Erlangen</span>
+          <span>© {new Date().getFullYear()} WEID Immobilien · Erlangen</span>
           <div className="flex gap-6">
-            <a className="transition-colors hover:text-ivory/70" href="#">
+            <Link className="transition-colors hover:text-ivory/70" href="/impressum">
               Impressum
-            </a>
-            <a className="transition-colors hover:text-ivory/70" href="#">
+            </Link>
+            <Link className="transition-colors hover:text-ivory/70" href="/datenschutz">
               Datenschutz
-            </a>
+            </Link>
           </div>
         </div>
       </footer>
