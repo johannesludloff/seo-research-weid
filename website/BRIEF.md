@@ -1,105 +1,82 @@
-# WEID Immobilien — Website Wireframe Brief
+# WEID Immobilien — Website Brief & Implementation Status
+
+## Project Runtime & Tooling
+**IMPORTANT:** This project uses the **Bun** runtime and package manager. 
+- Use `bun install` for installing dependencies.
+- Use `bun dev` to start the development server.
+- **Do not use npm or pnpm.**
 
 ## Project Setup
-Create a Next.js 15 app with Tailwind CSS and shadcn/ui components.
+- **Framework:** Next.js 16.1.6
+- **Runtime:** Bun
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4.x (using `@theme inline`)
+- **Components:** shadcn/ui (radix-ui)
+- **Icons:** lucide-react
 
-Use the Vercel frontend design skill:
-```
-npx -y @anthropic-ai/claude-code-skill@latest frontend-design
-```
-
-## Design System (from Styleguide)
+## Design System (Actual Implementation)
 
 ### Colors
-```css
---noir: #1A1A1A          /* Primary text, headlines */
---ivory: #F5F0EA         /* Primary background */
---warm-sand: #C8B9A5     /* Secondary background, dividers */
---parchment: #E8E0D4     /* Cards, input fields */
---taupe: #9A8A78         /* Subtext, disabled states */
---espresso: #5C4A3A      /* Accents, hover states */
---sage: #8A9A7E          /* Success, sparse accents */
-```
+Colors are defined in `src/app/globals.css` using Tailwind 4 theme variables:
+- `noir`: `#1A1A1A` (Primary text, headlines, dark backgrounds)
+- `ivory`: `#F5F0EA` (Primary background)
+- `warm-sand`: `#C8B9A5` (Secondary background, dividers)
+- `parchment`: `#E8E0D4` (Cards, input fields)
+- `taupe`: `#9A8A78` (Subtext, labels)
+- `espresso`: `#5C4A3A` (Accents, hover states)
+- `sage`: `#8A9A7E` (Success accents)
 
 ### Typography
-- **Display/Headlines:** Cormorant Garamond (Google Fonts) — Light/Regular, editorial
-- **Body:** Inter (Google Fonts) — Clean, readable
-- **Labels/Nav:** Inter, Medium, Uppercase, letter-spacing: 0.08em
+- **Headlines:** `font-display` (Cormorant Garamond) — Light, Editorial feel.
+- **Body:** `font-body` (Inter) — Clean, highly readable.
+- **Navigation:** Uppercase, letter-spacing: `0.18em` (Tracking wide).
 
-### Typography Scale (Desktop)
-- Hero: 72-120px, Light, line-height: 0.9-1.0
-- H1: 48-64px
-- H2: 32-40px
-- Body: 16-17px, line-height: 1.65
+## Implemented UI Components
+- **Reveal**: Intersection observer-based animation component (`src/components/reveal.tsx`).
+- **ImageCarousel**: Property gallery component with navigation (`src/components/image-carousel.tsx`).
+- **MobileNav**: Full-screen overlay menu for mobile devices.
+- **LeadForm**: Inquiry form for property leads.
+- **CookieBanner**: GDPR-compliant consent management.
 
-## Sections to Build (from Moodboard)
+## Homepage Implementation (Sections)
 
 ### 1. Hero Section
-Full-width image background with large white typography overlay.
-Reference: "Echoes of Elegance: Restoring Parisian Grandeur, One Apartment at a Time"
-- Full viewport height
-- Warm architectural/interior photo (Unsplash)
-- Large serif headline, white text
-- Subtle scroll indicator
+Full-width architectural background with large serif typography.
+- "Echoes of Elegance: restoring spaces with calm precision."
+- Subtle scroll indicator.
 
-### 2. Corner Text Section
-White/Ivory background section with:
-- Words positioned in corners of the section
-- Centered paragraph text
-- Horizontal line below
-- Asymmetric but balanced layout
-Reference: The editorial layouts in moodboard with text in corners
+### 2. Corner Text / Statement Section
+Asymmetric layout with text anchors in corners:
+- "Ankauf", "Beratung", "Verkauf", "Vermietung".
+- Centered brand statement on `parchment` background.
 
-### 3. Image Carousel / Gallery
-- Large center image
-- Peek of next image on the right
-- Text/caption on the left side
-- Smooth transitions
-Reference: "03 Panel & QA" style from moodboard
+### 3. Portfolio Showcase
+- Grid layout with property overview.
+- Integrated `ImageCarousel`.
+- Focus on curated, high-quality photography.
 
 ### 4. Feature Grid
-Asymmetric grid with:
-- Large image taking 2/3 width
-- Smaller images stacked
-- Text overlays
-Reference: The "Digital Invites Vol. 2" layout
+- Asymmetric 12-column grid layout.
+- Property cards for "Altbau", "Maisonette", and "Neubau".
+- Interactive image overlays.
 
 ### 5. CTA Section
-- Dark (Noir) background
-- Large white serif headline
-- Minimal button (outlined or solid)
-Reference: "ARCHITECTED TO STAND ALONE" dark section
+- High-contrast `noir` background.
+- "Architected to stand alone."
+- Large outlined button for contact conversion.
 
-### 6. Footer
-- Noir background
-- Ivory text
-- Minimal link structure
-- No clutter
-
-## UI Components Needed
-- Button (Primary: Noir bg, Ivory text / Secondary: outlined)
-- Navigation (uppercase, spaced letters)
-- Card (Parchment bg, no border, sharp corners)
-- Input fields (bottom-border only style)
-
-## Image Sources
-Use Unsplash for placeholder images:
-- Warm, editorial architecture/interior photography
-- Soft natural lighting
-- Muted, warm tones
-- Focus on materials (wood, stone, textile)
+## Site Structure & Routes
+- `/`: Home
+- `/immobilien`: Property Listings (Portfolio)
+- `/verkaufen`: Selling Process
+- `/wertermittlung`: Valuation Tool
+- `/ueber-uns`: About us
+- `/kontakt`: Contact & Inquiries
+- `/impressum`: Legal
+- `/datenschutz`: Privacy
 
 ## Technical Requirements
-- Mobile responsive
-- Smooth scroll animations (subtle fade-in from bottom)
-- No bounce effects or flashy animations
-- Sharp corners (0-4px radius max)
-- Generous whitespace (8px base unit)
-
-## Don'ts
-- No bright/neon colors
-- No rounded corners > 4px
-- No drop shadows
-- No generic stock photo aesthetic
-- No decorative icons
-- No underlined links
+- **Mobile Responsive:** Full support for all breakpoints.
+- **Animations:** Subtle animations (`fade-up`) with 700ms duration and cubic-bezier easing.
+- **Performance:** Optimized image loading via `next/image`.
+- **Packaging:** Only Bun is supported for dependency management.

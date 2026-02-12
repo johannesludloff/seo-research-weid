@@ -20,7 +20,7 @@ const images = {
     "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop",
   team: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1400&auto=format&fit=crop",
   ctaBg:
-    "https://images.unsplash.com/photo-1600566753086-00f18f6b2d97?q=80&w=2400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600607687920-4e2a12ae1a82?q=80&w=2400&auto=format&fit=crop",
 };
 
 /* ─── Data ─── */
@@ -311,9 +311,8 @@ export default function Home() {
               return (
                 <Reveal key={property.title} variant={isReversed ? "right" : "left"}>
                   <div
-                    className={`grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:gap-10 ${
-                      isReversed ? "md:direction-rtl" : ""
-                    }`}
+                    className={`grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:gap-10 ${isReversed ? "md:direction-rtl" : ""
+                      }`}
                     style={isReversed ? { direction: "rtl" } : undefined}
                   >
                     <div
