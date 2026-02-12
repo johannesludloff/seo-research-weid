@@ -1,0 +1,157 @@
+{
+  "project": "WEID Immobilien Website",
+  "client": "WEID Immobilien",
+  "currency": "EUR",
+  "hourlyRate": null,
+  "totalMinutes": 0,
+  "entries": [
+    {
+      "date": "2026-02-11",
+      "startTime": "19:30",
+      "endTime": "20:00",
+      "minutes": 30,
+      "category": "research",
+      "description": "Initial SEO research, keyword analysis, competitor research",
+      "source": "git:14af5bab,edc08b2a"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "20:00",
+      "endTime": "20:30",
+      "minutes": 30,
+      "category": "research",
+      "description": "SEO content strategy, expanded competitor analysis, sitemap architecture",
+      "source": "git:a3e7bbf5,b7e520d0"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "20:30",
+      "endTime": "21:00",
+      "minutes": 30,
+      "category": "planning",
+      "description": "Implementation stages with hour estimates, backlink strategy, next steps proposal",
+      "source": "git:b0965dc6,435daa0a,56064833"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "21:00",
+      "endTime": "21:30",
+      "minutes": 30,
+      "category": "setup",
+      "description": "Project restructure, move SEO research to subfolder, prepare for full project",
+      "source": "git:75977270"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "21:30",
+      "endTime": "22:00",
+      "minutes": 30,
+      "category": "planning",
+      "description": "GitHub project setup, issue creation for Stage 1-4, labels and milestones",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "22:00",
+      "endTime": "22:30",
+      "minutes": 30,
+      "category": "design",
+      "description": "Moodboard organization, styleguide creation/upload",
+      "source": "git:4e0ec108,091a76ba"
+    },
+    {
+      "date": "2026-02-11",
+      "startTime": "22:30",
+      "endTime": "23:00",
+      "minutes": 30,
+      "category": "design",
+      "description": "Organize moodboard and styleguide to design folder",
+      "source": "git:35a6d703"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "06:30",
+      "endTime": "07:00",
+      "minutes": 30,
+      "category": "development",
+      "description": "Homepage wireframe development, design system setup, Tailwind v4 colors",
+      "source": "git:47f8aa27"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "07:00",
+      "endTime": "07:30",
+      "minutes": 30,
+      "category": "development",
+      "description": "Mobile navigation, image carousel, reveal animations, shadcn/ui button",
+      "source": "git:47f8aa27,d2ee6adb"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "07:30",
+      "endTime": "08:00",
+      "minutes": 30,
+      "category": "development",
+      "description": "Scaffold all Stage 1 MVP pages (verkaufen, immobilien, wertermittlung, etc.)",
+      "source": "git:d2ee6adb"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "13:00",
+      "endTime": "13:30",
+      "minutes": 30,
+      "category": "setup",
+      "description": "Server security discussion, new user setup, Claude Code installation and login",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "14:30",
+      "endTime": "15:00",
+      "minutes": 30,
+      "category": "development",
+      "description": "V1 alternative homepage - Claude Code with Opus, split-hero design",
+      "source": "git:56ec41ea"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "20:30",
+      "endTime": "21:00",
+      "minutes": 30,
+      "category": "development",
+      "description": "Refactor V1 to route, add marquee component, enhance reveal animations, design assets checklist issue #25",
+      "source": "git:87706fe6,06704f9e"
+    },
+    {
+      "date": "2026-02-12",
+      "startTime": "21:00",
+      "endTime": "21:30",
+      "minutes": 30,
+      "category": "planning",
+      "description": "Schedule overnight job for V2-V10 homepage versions, time tracking setup",
+      "source": "conversation"
+    }
+  ],
+  "summary": {
+    "byCategory": {
+      "research": 60,
+      "planning": 90,
+      "setup": 60,
+      "design": 60,
+      "development": 150
+    },
+    "byDate": {
+      "2026-02-11": 210,
+      "2026-02-12": 210
+    },
+    "totalMinutes": 420,
+    "totalHours": 7.0
+  },
+  "notes": [
+    "Times are in UTC unless marked otherwise",
+    "30-minute chunks - if any work happened in a chunk, full 30 min counted",
+    "Sources: git commits, conversation timestamps",
+    "Automated work (Claude Code running overnight) tracked separately"
+  ],
+  "lastUpdated": "2026-02-12T21:00:00Z"
+}
