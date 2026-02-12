@@ -11,7 +11,8 @@ const buttonVariants = cva(
       variant: {
         default: "bg-noir text-ivory hover:bg-espresso",
         outline: "border border-noir text-noir hover:bg-noir hover:text-ivory",
-        ghost: "text-taupe hover:text-noir"
+        ghost: "text-taupe hover:text-noir",
+        ivory: "bg-ivory text-noir hover:bg-parchment"
       },
       size: {
         default: "h-12 px-10",

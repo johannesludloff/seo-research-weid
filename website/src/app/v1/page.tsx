@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
 import { Marquee } from "@/components/marquee";
-import { SplitImage } from "@/components/split-image";
 
 /* ─── Unsplash images ─── */
 
@@ -81,14 +80,14 @@ const properties = [
 
 /* ─── Page ─── */
 
-export default function Home() {
+export default function V1HomePage() {
   return (
     <main className="bg-ivory text-noir">
       {/* ━━━ Header ━━━ */}
       <header className="fixed left-0 right-0 top-0 z-50 mix-blend-difference">
         <div className="flex items-center justify-between px-6 py-6 md:px-12 lg:px-20">
           <Link
-            href="/"
+            href="/v1"
             className="font-display text-xl tracking-[0.06em] text-ivory md:text-2xl"
           >
             WEID
@@ -546,6 +545,11 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Version indicator */}
+      <div className="fixed bottom-4 left-4 z-50 rounded bg-noir/80 px-3 py-1.5 text-[10px] uppercase tracking-wider text-ivory/60">
+        V1 — Split Hero
+      </div>
     </main>
   );
 }
