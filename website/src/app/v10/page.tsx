@@ -107,7 +107,7 @@ export default function V10HomePage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-noir/50 via-noir/20 to-noir/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-noir/70 via-noir/30 to-noir/50" />
 
         {/* Minimal text — bottom-left corner */}
         <div className="absolute bottom-12 left-6 z-10 md:bottom-16 md:left-12 lg:bottom-20 lg:left-20">
