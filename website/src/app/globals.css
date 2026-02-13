@@ -153,3 +153,12 @@ img {
   scroll-snap-align: start;
   flex-shrink: 0;
 }
+
+/* Vertical text utilities */
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+.writing-vertical-lr {
+  writing-mode: vertical-lr;
+}

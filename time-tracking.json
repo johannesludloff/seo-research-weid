@@ -130,6 +130,15 @@
       "category": "planning",
       "description": "Schedule overnight job for V2-V10 homepage versions, time tracking setup",
       "source": "conversation"
+    },
+    {
+      "date": "2026-02-13",
+      "startTime": "07:30",
+      "endTime": "08:00",
+      "minutes": 30,
+      "category": "development",
+      "description": "Install OpenCode CLI, configure OpenCode Zen with M2.5-free model, create V11 and V12 homepage versions",
+      "source": "opencode:minimax-m2.5-free"
     }
   ],
   "summary": {
@@ -138,14 +147,15 @@
       "planning": 90,
       "setup": 60,
       "design": 60,
-      "development": 150
+      "development": 180
     },
     "byDate": {
       "2026-02-11": 210,
-      "2026-02-12": 210
+      "2026-02-12": 210,
+      "2026-02-13": 30
     },
-    "totalMinutes": 420,
-    "totalHours": 7.0
+    "totalMinutes": 450,
+    "totalHours": 7.5
   },
   "notes": [
     "Times are in UTC unless marked otherwise",
@@ -153,5 +163,5 @@
     "Sources: git commits, conversation timestamps",
     "Automated work (Claude Code running overnight) tracked separately"
   ],
-  "lastUpdated": "2026-02-12T21:00:00Z"
+  "lastUpdated": "2026-02-13T07:45:00Z"
 }
