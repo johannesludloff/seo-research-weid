@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Reveal } from '@/components/reveal';
 import { MobileNav } from '@/components/mobile-nav';
+import { VersionNav } from "@/components/version-nav";
 
 const images = {
   hero1: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2400&auto=format&fit=crop',
@@ -441,6 +442,8 @@ export default function V12HomePage() {
       <div className="fixed bottom-4 right-4 z-50 text-[10px] uppercase tracking-wider text-taupe">
         M2.5
       </div>
+    
+      <VersionNav current={12} />
     </main>
   );
 }

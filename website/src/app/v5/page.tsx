@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
+import { VersionNav } from "@/components/version-nav";
 
 /* ─── Data ─── */
 
@@ -490,6 +491,7 @@ export default function V5HomePage() {
           </div>
         </div>
       </footer>
+      <VersionNav current={5} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
+import { VersionNav } from "@/components/version-nav";
 
 /* ─── Images ─── */
 
@@ -628,6 +629,8 @@ export default function V9HomePage() {
       <div className="fixed bottom-4 left-4 z-50 rounded bg-noir/80 px-3 py-1.5 text-[10px] uppercase tracking-wider text-ivory/60">
         V9 — Architectural Grid
       </div>
+    
+      <VersionNav current={9} />
     </main>
   );
 }
