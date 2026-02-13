@@ -62,9 +62,9 @@ export default function V11HomePage() {
 
       {/* ━━━ Hero — Split Editorial ━━━ */}
       <section className="relative min-h-screen w-full pt-20">
-        <div className="grid h-full md:grid-cols-2 lg:grid-cols-12">
+        <div className="grid min-h-[calc(100vh-5rem)] md:grid-cols-2 lg:grid-cols-12">
           {/* Left: Big editorial text */}
-          <div className="flex flex-col justify-center px-6 pb-16 md:px-12 md:py-32 lg:px-20 lg:py-40">
+          <div className="flex flex-col justify-center px-6 py-16 md:px-12 md:py-32 lg:col-span-5 lg:px-20 lg:py-40">
             <Reveal variant="left">
               <p className="text-[10px] uppercase tracking-[0.5em] text-taupe">
                 Immobilien
@@ -94,13 +94,13 @@ export default function V11HomePage() {
           </div>
           
           {/* Right: Full-bleed image */}
-          <div className="relative h-[50vh] md:h-auto lg:col-span-7">
+          <div className="relative min-h-[50vh] md:min-h-full lg:col-span-7">
             <Image
               src={images.hero}
               alt="Elegante Architektur"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-noir/10" />
           </div>
