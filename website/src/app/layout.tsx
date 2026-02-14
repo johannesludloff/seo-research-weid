@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { CookieBanner } from "@/components/cookie-banner";
+import { ConsentManager } from "@/components/consent-manager";
+import { Analytics } from "@/components/analytics";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -27,9 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        {/* Consentmanager CMP - must load before any tracking */}
+        <ConsentManager />
+      </head>
       <body className={`${cormorant.variable} ${inter.variable} font-body`}>
         {children}
-        <CookieBanner />
+        {/* GA4 - blocked by consentmanager until consent */}
+        <Analytics />
       </body>
     </html>
   );
