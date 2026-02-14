@@ -5,7 +5,6 @@ import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
 import { Marquee } from "@/components/marquee";
 import { VersionNav } from "@/components/version-nav";
-import { BuyerPopup } from "@/components/buyer-popup";
 
 /* ─── Unsplash images ─── */
 
@@ -35,21 +34,21 @@ const stats = [
 const services = [
   {
     number: "01",
-    title: "Präzise Wertermittlung",
+    title: "Verkauf & Vermarktung",
     description:
-      "Wissen, was Ihre Immobilie in Erlangen wirklich wert ist. Wir kombinieren lokale Marktkenntnis mit datengestützten Analysen für ein fundiertes Ergebnis.",
+      "Diskrete, maßgeschneiderte Vermarktungsstrategien für anspruchsvolle Immobilien. Vom ersten Gespräch bis zum Notartermin.",
   },
   {
     number: "02",
-    title: "Diskrete Vermarktung",
+    title: "Wertermittlung",
     description:
-      "Ihr Verkauf ist bei uns Privatsache. Wir erreichen die richtige Zielgruppe über unser exklusives Netzwerk – oft ohne öffentliche Inserate.",
+      "Fundierte Marktwertanalysen auf Basis lokaler Expertise und aktueller Marktdaten. Transparent und nachvollziehbar.",
   },
   {
     number: "03",
-    title: "Ganzheitliche Begleitung",
+    title: "Beratung & Begleitung",
     description:
-      "Vom ersten Beratungsgespräch bis zum rechtssicheren Notartermin. Wir übernehmen die Details, damit Sie sich auf das Wesentliche konzentrieren können.",
+      "Persönliche Betreuung in jeder Phase Ihrer Immobilienentscheidung. Ehrlich, kompetent und mit Blick fürs Detail.",
   },
 ];
 
@@ -144,9 +143,9 @@ export default function V1HomePage() {
           </Reveal>
           <Reveal variant="left" delay={200}>
             <p className="mt-8 max-w-md text-[15px] leading-relaxed text-taupe">
-              Wir vermitteln nicht nur Immobilien – wir kuratieren Lebensräume
-              in Erlangen. Mit Ruhe, Klarheit und einer Expertise, die auf
-              tiefem Verständnis für den lokalen Markt basiert.
+              Wir vermitteln nicht nur Immobilien — wir kuratieren Lebensräume
+              in Erlangen mit ruhiger Klarheit und einem Auge für das
+              Besondere.
             </p>
           </Reveal>
           <Reveal variant="left" delay={300}>
@@ -554,7 +553,6 @@ export default function V1HomePage() {
       </div>
     
       <VersionNav current={1} />
-      <BuyerPopup />
     </main>
   );
 }
