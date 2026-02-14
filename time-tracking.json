@@ -139,6 +139,15 @@
       "category": "development",
       "description": "Install OpenCode CLI, configure OpenCode Zen with M2.5-free model, create V11 and V12 homepage versions",
       "source": "opencode:minimax-m2.5-free"
+    },
+    {
+      "date": "2026-02-14",
+      "startTime": "16:00",
+      "endTime": "16:30",
+      "minutes": 30,
+      "category": "development",
+      "description": "Consentmanager CMP + GA4 integration, DSGVO compliance, automatic blocking",
+      "source": "git:d05979c9"
     }
   ],
   "summary": {
@@ -147,15 +156,16 @@
       "planning": 90,
       "setup": 60,
       "design": 60,
-      "development": 180
+      "development": 210
     },
     "byDate": {
       "2026-02-11": 210,
       "2026-02-12": 210,
-      "2026-02-13": 30
+      "2026-02-13": 30,
+      "2026-02-14": 30
     },
-    "totalMinutes": 450,
-    "totalHours": 7.5
+    "totalMinutes": 480,
+    "totalHours": 8.0
   },
   "notes": [
     "Times are in UTC unless marked otherwise",
@@ -163,5 +173,5 @@
     "Sources: git commits, conversation timestamps",
     "Automated work (Claude Code running overnight) tracked separately"
   ],
-  "lastUpdated": "2026-02-13T07:45:00Z"
+  "lastUpdated": "2026-02-14T16:05:00Z"
 }
