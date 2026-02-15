@@ -59,8 +59,8 @@ export default function Home() {
               Erlangen · Residenzen & Investments
             </p>
             <h1 className="font-display text-4xl font-light leading-[0.95] text-ivory md:text-6xl lg:text-7xl">
-              Echoes of Elegance
-              <span className="block italic">restoring spaces with calm precision.</span>
+              Eleganz mit Substanz
+              <span className="block italic">Räume mit ruhiger Präzision gestalten.</span>
             </h1>
           </Reveal>
           <Reveal
@@ -69,7 +69,7 @@ export default function Home() {
             aria-label="Zum Scrollen nach unten wischen"
           >
             <span className="h-px w-16 bg-ivory/70" aria-hidden="true" />
-            Scroll
+            Scrollen
           </Reveal>
         </div>
       </section>
@@ -155,7 +155,7 @@ export default function Home() {
           <Reveal>
             <p className="text-xs uppercase tracking-[0.2em] text-ivory/60">Kontakt</p>
             <h2 className="mt-4 font-display text-4xl leading-tight md:text-5xl">
-              Architected to stand alone.
+              Eigenständig konzipiert. Persönlich begleitet.
             </h2>
             <p className="mt-6 text-base text-ivory/70">
               Wir begleiten Sie mit diskreter Expertise — vom ersten Gespräch bis zur
