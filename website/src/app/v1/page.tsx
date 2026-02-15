@@ -5,6 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
 import { Marquee } from "@/components/marquee";
 import { VersionNav } from "@/components/version-nav";
+import { BuyerPopup } from "@/components/buyer-popup";
 
 /* ─── Unsplash images ─── */
 
@@ -26,29 +27,29 @@ const images = {
 /* ─── Data ─── */
 
 const stats = [
-  { value: "15+", label: "Jahre Erfahrung" },
-  { value: "200+", label: "Erfolgreiche Projekte" },
-  { value: "98%", label: "Kundenzufriedenheit" },
+  { value: "15+", label: "Jahre in Erlangen" },
+  { value: "240+", label: "Vermittelte Objekte" },
+  { value: "Ø 47", label: "Tage bis Verkauf" },
 ];
 
 const services = [
   {
     number: "01",
-    title: "Verkauf & Vermarktung",
+    title: "Präzise Wertermittlung",
     description:
-      "Diskrete, maßgeschneiderte Vermarktungsstrategien für anspruchsvolle Immobilien. Vom ersten Gespräch bis zum Notartermin.",
+      "Was ist Ihre Immobilie in Erlangen wirklich wert? Wir analysieren den lokalen Markt, vergleichen aktuelle Verkäufe und liefern Ihnen eine fundierte Einschätzung. Kostenlos und unverbindlich.",
   },
   {
     number: "02",
-    title: "Wertermittlung",
+    title: "Diskrete Vermarktung",
     description:
-      "Fundierte Marktwertanalysen auf Basis lokaler Expertise und aktueller Marktdaten. Transparent und nachvollziehbar.",
+      "Nicht jeder Verkauf gehört ins Schaufenster. Wir erreichen vorgemerkte Käufer aus unserem Netzwerk, bevor Ihre Immobilie öffentlich inseriert wird. Ihr Vorteil: weniger Besichtigungstourismus, mehr ernsthafte Interessenten.",
   },
   {
     number: "03",
-    title: "Beratung & Begleitung",
+    title: "Begleitung bis zum Notar",
     description:
-      "Persönliche Betreuung in jeder Phase Ihrer Immobilienentscheidung. Ehrlich, kompetent und mit Blick fürs Detail.",
+      "Vom ersten Beratungsgespräch bis zur Schlüsselübergabe: Wir koordinieren Gutachter, Finanzierungsberater und Notartermine. Sie konzentrieren sich auf das Wesentliche – wir kümmern uns um den Rest.",
   },
 ];
 
@@ -143,9 +144,9 @@ export default function V1HomePage() {
           </Reveal>
           <Reveal variant="left" delay={200}>
             <p className="mt-8 max-w-md text-[15px] leading-relaxed text-taupe">
-              Wir vermitteln nicht nur Immobilien — wir kuratieren Lebensräume
-              in Erlangen mit ruhiger Klarheit und einem Auge für das
-              Besondere.
+              Seit über 15 Jahren vermitteln wir Immobilien in Erlangen. 
+              Nicht mit lautem Marketing, sondern mit lokaler Expertise, 
+              persönlicher Betreuung und einem Netzwerk, das Türen öffnet.
             </p>
           </Reveal>
           <Reveal variant="left" delay={300}>
@@ -389,15 +390,14 @@ export default function V1HomePage() {
                 <span className="italic">Verbindlich.</span>
               </h2>
               <p className="mt-6 text-[15px] leading-relaxed text-taupe">
-                WEID Immobilien wurde mit der Überzeugung gegründet, dass
-                Immobilienvermittlung Vertrauenssache ist. Wir kennen den
-                Erlanger Markt wie unsere eigene Nachbarschaft — weil es
-                genau das ist.
+                Wir sind kein Franchise und keine Maklerkette. WEID ist ein 
+                inhabergeführtes Büro in Erlangen, das seit 2009 Eigentümer 
+                und Käufer zusammenbringt. Persönlich, nicht anonym.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-taupe">
-                Unser kleines Team verbindet lokale Verwurzelung mit
-                zeitgemäßer Vermarktung. Kein Massengeschäft, sondern
-                individuelle Betreuung mit Handschlagqualität.
+                Unser Vorteil: Wir kennen jeden Stadtteil. Wissen, was eine 
+                Wohnung am Röthelheimpark von einer am Burgberg unterscheidet. 
+                Und haben die Kontakte, die den Unterschied machen.
               </p>
               <div className="mt-8">
                 <Button variant="outline" asChild>
@@ -431,9 +431,9 @@ export default function V1HomePage() {
                   <span className="italic">beginnt hier.</span>
                 </h2>
                 <p className="mt-8 max-w-lg text-[15px] leading-relaxed text-ivory/60">
-                  Ob Verkauf, Bewertung oder eine erste Einschätzung — wir
-                  nehmen uns Zeit für Ihr Anliegen. Diskret, persönlich und
-                  unverbindlich.
+                  Sie denken über einen Verkauf nach? Oder suchen eine Einschätzung, 
+                  was Ihre Immobilie am Burgberg oder in Bruck heute wert ist? 
+                  Lassen Sie uns unverbindlich sprechen.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
                   <Button variant="ivory" size="lg" asChild>
@@ -553,6 +553,7 @@ export default function V1HomePage() {
       </div>
     
       <VersionNav current={1} />
+      <BuyerPopup />
     </main>
   );
 }
