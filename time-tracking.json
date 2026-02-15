@@ -148,24 +148,52 @@
       "category": "development",
       "description": "Consentmanager CMP + GA4 integration, DSGVO compliance, automatic blocking",
       "source": "git:d05979c9"
+    },
+    {
+      "date": "2026-02-14",
+      "startTime": "18:00",
+      "endTime": "18:30",
+      "minutes": 30,
+      "category": "planning",
+      "description": "SEO Master + Copywriting Master skill creation, pSEO strategy document",
+      "source": "git:5653541"
+    },
+    {
+      "date": "2026-02-14",
+      "startTime": "20:00",
+      "endTime": "21:00",
+      "minutes": 60,
+      "category": "development",
+      "description": "Programmatic SEO strategy, GitHub issue #26 (Käufer vs Verkäufer), Claude Code handoff attempts",
+      "source": "conversation"
+    },
+    {
+      "date": "2026-02-15",
+      "startTime": "06:00",
+      "endTime": "06:30",
+      "minutes": 30,
+      "category": "development",
+      "description": "V1 copywriting overhaul, buyer popup, Propstack mock integration (types, api, hooks, mock-data), immobilien pages update",
+      "source": "git:893c931f"
     }
   ],
   "summary": {
     "byCategory": {
       "research": 60,
-      "planning": 90,
+      "planning": 120,
       "setup": 60,
       "design": 60,
-      "development": 210
+      "development": 300
     },
     "byDate": {
       "2026-02-11": 210,
       "2026-02-12": 210,
       "2026-02-13": 30,
-      "2026-02-14": 30
+      "2026-02-14": 120,
+      "2026-02-15": 30
     },
-    "totalMinutes": 480,
-    "totalHours": 8.0
+    "totalMinutes": 600,
+    "totalHours": 10.0
   },
   "notes": [
     "Times are in UTC unless marked otherwise",
@@ -173,5 +201,5 @@
     "Sources: git commits, conversation timestamps",
     "Automated work (Claude Code running overnight) tracked separately"
   ],
-  "lastUpdated": "2026-02-14T16:05:00Z"
+  "lastUpdated": "2026-02-15T06:20:00Z"
 }
