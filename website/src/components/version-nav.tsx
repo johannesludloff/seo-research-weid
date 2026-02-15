@@ -8,7 +8,7 @@ interface VersionNavProps {
   total?: number;
 }
 
-export function VersionNav({ current, total = 12 }: VersionNavProps) {
+export function VersionNav({ current, total = 15 }: VersionNavProps) {
   const prev = current > 1 ? current - 1 : null;
   const next = current < total ? current + 1 : null;
 
