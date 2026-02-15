@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Kontakt | WEID Immobilien Erlangen",
   description:
     "Kontaktieren Sie WEID Immobilien in Erlangen. Telefon, E-Mail oder Kontaktformular — wir sind für Sie da.",
+  openGraph: {
+    title: "Kontakt | WEID Immobilien Erlangen",
+    description:
+      "Kontaktieren Sie WEID Immobilien in Erlangen. Telefon, E-Mail oder Kontaktformular — wir sind für Sie da.",
+    url: '/kontakt',
+  },
+  alternates: {
+    canonical: '/kontakt',
+  },
 };
 
 export default function KontaktPage() {

@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: "Über uns | WEID Immobilien Erlangen",
   description:
     "Lernen Sie WEID Immobilien kennen — Ihr lokaler Partner für Immobilien in Erlangen. Geschichte, Team und Werte.",
+  openGraph: {
+    title: "Über uns | WEID Immobilien Erlangen",
+    description:
+      "Lernen Sie WEID Immobilien kennen — Ihr lokaler Partner für Immobilien in Erlangen. Geschichte, Team und Werte.",
+    url: '/ueber-uns',
+  },
+  alternates: {
+    canonical: '/ueber-uns',
+  },
 };
 
 export default function UeberUnsPage() {

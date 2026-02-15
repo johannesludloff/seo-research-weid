@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Immobilie verkaufen in Erlangen | WEID Immobilien",
   description:
     "Verkaufen Sie Ihre Immobilie in Erlangen mit WEID Immobilien. Professionelle Bewertung, diskrete Vermarktung und persönliche Betreuung.",
+  openGraph: {
+    title: "Immobilie verkaufen in Erlangen | WEID Immobilien",
+    description:
+      "Verkaufen Sie Ihre Immobilie in Erlangen mit WEID Immobilien. Professionelle Bewertung, diskrete Vermarktung und persönliche Betreuung.",
+    url: '/verkaufen',
+  },
+  alternates: {
+    canonical: '/verkaufen',
+  },
 };
 
 export default function VerkaufenPage() {

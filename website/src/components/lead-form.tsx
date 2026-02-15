@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
+import { trackEvent } from "@/components/analytics";
 
 interface LeadFormProps {
   title?: string;
@@ -13,7 +14,7 @@ interface LeadFormProps {
 
 /**
  * Reusable lead capture form.
- * Wire up to your form handler / API when ready.
+ * Connected to /api/contact for email notifications via Resend.
  */
 export function LeadForm({
   title = "Kontakt aufnehmen",
@@ -22,11 +23,63 @@ export function LeadForm({
   variant = "default",
 }: LeadFormProps) {
   const [submitted, setSubmitted] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Connect to form handler (e.g., Formspree, custom API)
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+
+      const payload: Record<string, string> = {
+        type: variant === "wertermittlung" ? "wertermittlung" : "contact",
+        name: formData.get("name") as string,
+        email: formData.get("email") as string,
+        phone: formData.get("phone") as string || "",
+        message: formData.get("message") as string || "",
+      };
+
+      if (variant === "wertermittlung") {
+        payload.address = formData.get("address") as string;
+        payload.propertyType = formData.get("propertyType") as string;
+      }
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Ein Fehler ist aufgetreten");
+      }
+
+      // Track successful submission
+      trackEvent(
+        "form_submit",
+        "Contact",
+        variant === "wertermittlung" ? "Wertermittlung" : "Kontakt",
+        1
+      );
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -40,6 +93,11 @@ export function LeadForm({
 
   return (
     <Reveal>
+      {error && (
+        <div className="mb-6 rounded bg-red-50 px-4 py-3 text-sm text-red-800 border border-red-200">
+          {error}
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="space-y-6">
         {title && (
           <div className="mb-8">
@@ -135,7 +193,9 @@ export function LeadForm({
         </div>
 
         <div className="pt-4">
-          <Button type="submit">{submitLabel}</Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Wird gesendet..." : submitLabel}
+          </Button>
         </div>
 
         <p className="text-xs text-taupe">

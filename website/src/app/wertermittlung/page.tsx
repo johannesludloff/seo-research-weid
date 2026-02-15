@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "Kostenlose Immobilienbewertung Erlangen | WEID Immobilien",
   description:
     "Kostenlose und unverbindliche Wertermittlung für Ihre Immobilie in Erlangen. Professionelle Bewertung durch lokale Experten.",
+  openGraph: {
+    title: "Kostenlose Immobilienbewertung Erlangen | WEID Immobilien",
+    description:
+      "Kostenlose und unverbindliche Wertermittlung für Ihre Immobilie in Erlangen. Professionelle Bewertung durch lokale Experten.",
+    url: '/wertermittlung',
+  },
+  alternates: {
+    canonical: '/wertermittlung',
+  },
 };
 
 export default function WertermittlungPage() {

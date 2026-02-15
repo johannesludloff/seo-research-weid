@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   title: "Immobilien in Erlangen | WEID Immobilien",
   description:
     "Aktuelle Immobilienangebote in Erlangen und Umgebung. Häuser, Wohnungen und Grundstücke — kuratiert von WEID Immobilien.",
+  openGraph: {
+    title: "Immobilien in Erlangen | WEID Immobilien",
+    description:
+      "Aktuelle Immobilienangebote in Erlangen und Umgebung. Häuser, Wohnungen und Grundstücke — kuratiert von WEID Immobilien.",
+    url: '/immobilien',
+  },
+  alternates: {
+    canonical: '/immobilien',
+  },
 };
 
 function formatPrice(property: PropstackUnit): string {

@@ -1,9 +1,23 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { MobileNav } from "@/components/mobile-nav";
 import { ImageCarousel } from "@/components/image-carousel";
+
+export const metadata: Metadata = {
+  title: "WEID Immobilien | Ihr Makler in Erlangen",
+  description: "WEID Immobilien begleitet Eigentümerinnen und Eigentümer in Erlangen mit ruhiger Klarheit — von der präzisen Bewertung bis zur diskreten Vermarktung.",
+  openGraph: {
+    title: "WEID Immobilien | Ihr Makler in Erlangen",
+    description: "WEID Immobilien begleitet Eigentümerinnen und Eigentümer in Erlangen mit ruhiger Klarheit — von der präzisen Bewertung bis zur diskreten Vermarktung.",
+    url: '/',
+  },
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const heroImage =
   "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2000&auto=format&fit=crop";
