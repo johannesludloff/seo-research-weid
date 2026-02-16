@@ -39,16 +39,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const property = await getProperty(id);
-  
+
   if (!property) {
     return {
       title: "Objekt nicht gefunden | WEID Immobilien",
     };
   }
 
+  const title = `${property.title} | WEID Immobilien`;
+  const description = property.description_note?.slice(0, 160) || `${getPropertyTypeLabel(property)} in ${property.city}`;
+  const imageUrl = property.images[0]?.big || property.images[0]?.original;
+
   return {
-    title: `${property.title} | WEID Immobilien`,
-    description: property.description_note?.slice(0, 160) || `${getPropertyTypeLabel(property)} in ${property.city}`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `/immobilien/${id}`,
+      images: imageUrl ? [
+        {
+          url: imageUrl,
+          alt: property.title,
+        },
+      ] : undefined,
+    },
+    alternates: {
+      canonical: `/immobilien/${id}`,
+    },
   };
 }
 
@@ -79,7 +97,7 @@ export default async function ImmobilieDetailPage({ params }: Props) {
       <section className="bg-parchment">
         <div className="mx-auto max-w-6xl px-6 py-8 md:px-14">
           {images.length > 0 ? (
-            <ImageCarousel images={images} alt={property.title} />
+            <ImageCarousel images={images} />
           ) : (
             <div className="aspect-[16/9] bg-warm-sand/30 flex items-center justify-center">
               <p className="text-taupe">Keine Bilder verfügbar</p>

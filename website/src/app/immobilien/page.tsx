@@ -5,9 +5,47 @@ import Link from "next/link";
 import { useProperties } from "@/lib/propstack/hooks";
 import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
+import { getProperties } from "@/lib/propstack/api";
+import { PropstackUnit } from "@/lib/propstack/types";
 
-export default function ImmobilienPage() {
-  const { properties, loading, error } = useProperties();
+export const metadata: Metadata = {
+  title: "Immobilien in Erlangen | WEID Immobilien",
+  description:
+    "Aktuelle Immobilienangebote in Erlangen und Umgebung. Häuser, Wohnungen und Grundstücke — kuratiert von WEID Immobilien.",
+  openGraph: {
+    title: "Immobilien in Erlangen | WEID Immobilien",
+    description:
+      "Aktuelle Immobilienangebote in Erlangen und Umgebung. Häuser, Wohnungen und Grundstücke — kuratiert von WEID Immobilien.",
+    url: '/immobilien',
+  },
+  alternates: {
+    canonical: '/immobilien',
+  },
+};
+
+function formatPrice(property: PropstackUnit): string {
+  if (property.marketing_type === "RENT") {
+    return `€ ${property.base_rent?.toLocaleString("de-DE")} /Monat`;
+  }
+  return `€ ${property.price.toLocaleString("de-DE")}`;
+}
+
+function getPropertyTypeLabel(property: PropstackUnit): string {
+  const typeMap: Record<string, string> = {
+    APARTMENT: "Wohnung",
+    HOUSE: "Haus",
+    LAND: "Grundstück",
+    COMMERCIAL: "Gewerbe",
+  };
+  return typeMap[property.rs_type] || property.rs_type;
+}
+
+function getMarketingLabel(property: PropstackUnit): string {
+  return property.marketing_type === "RENT" ? "Miete" : "Kauf";
+}
+
+export default async function ImmobilienPage() {
+  const properties = await getProperties();
 
   return (
     <main className="min-h-screen bg-ivory text-noir pt-32 pb-20 px-6 md:px-12 lg:px-20">
@@ -60,14 +98,14 @@ export default function ImmobilienPage() {
                       )}
                     </div>
                   </div>
-                  
+
                   <p className="text-[10px] uppercase tracking-widest text-taupe mb-2">
                     {property.location.city} {property.location.district ? `· ${property.location.district}` : ''}
                   </p>
                   <h3 className="font-display text-2xl mb-4 leading-tight group-hover:text-espresso transition-colors">
                     {property.title}
                   </h3>
-                  
+
                   <div className="flex gap-4 items-center text-[11px] uppercase tracking-wider text-taupe border-t border-warm-sand/30 pt-4">
                     <span>{property.features.area_living} m²</span>
                     <span className="text-warm-sand/40">|</span>
