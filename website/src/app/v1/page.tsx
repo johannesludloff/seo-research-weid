@@ -144,9 +144,9 @@ export default function V1HomePage() {
           </Reveal>
           <Reveal variant="left" delay={200}>
             <p className="mt-8 max-w-md text-[15px] leading-relaxed text-taupe">
-              Seit über 15 Jahren vermitteln wir Immobilien in Erlangen. 
-              Nicht mit lautem Marketing, sondern mit lokaler Expertise, 
-              persönlicher Betreuung und einem Netzwerk, das Türen öffnet.
+              Seit 2009 in Erlangen. Über 240 vermittelte Objekte. 
+              Wir kennen jeden Stadtteil, haben 500+ vorgemerkte Käufer 
+              und begleiten Sie bis zum Notar.
             </p>
           </Reveal>
           <Reveal variant="left" delay={300}>
@@ -281,7 +281,10 @@ export default function V1HomePage() {
         <div className="relative z-10 flex h-full items-center justify-center">
           <Reveal variant="fade">
             <p className="text-center font-display text-3xl italic text-ivory md:text-5xl lg:text-6xl">
-              &ldquo;Substanz vor Lautstärke&rdquo;
+              &ldquo;Ohne WEID hätten wir das Haus nie bekommen.&rdquo;
+            </p>
+            <p className="mt-4 text-center text-sm text-ivory/50">
+              — Familie Brenner, Röthelheimpark
             </p>
           </Reveal>
         </div>
@@ -362,6 +365,61 @@ export default function V1HomePage() {
             <Button variant="outline" asChild>
               <Link href="/immobilien">Alle Objekte ansehen</Link>
             </Button>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ━━━ Buyer FOMO Section ━━━ */}
+      <section className="bg-noir px-6 py-20 md:px-12 md:py-28 lg:px-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <Reveal>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-ivory/40">
+              Für Käufer
+            </p>
+            <h2 className="mt-6 font-display text-3xl font-light leading-tight text-ivory md:text-5xl lg:text-6xl">
+              Die besten Objekte in Erlangen
+              <br />
+              <span className="italic text-ivory/70">sehen Sie nie.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className="mx-auto mt-8 max-w-xl text-[15px] leading-relaxed text-ivory/60">
+              70% unserer Immobilien werden verkauft, bevor sie auf ImmoScout 
+              oder Immowelt erscheinen. Unser Netzwerk aus vorgemerkten Käufern 
+              erfährt zuerst davon – oft Tage vor allen anderen.
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+              <Button variant="ivory" size="lg" asChild>
+                <Link href="/kontakt">Auf die Liste setzen</Link>
+              </Button>
+              <p className="text-[11px] text-ivory/40">
+                Kostenlos · Unverbindlich · Kein Spam
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="mt-16 grid gap-8 border-t border-ivory/10 pt-12 md:grid-cols-3">
+              <div>
+                <p className="font-display text-4xl text-ivory">500+</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.15em] text-ivory/40">
+                  Vorgemerkte Käufer
+                </p>
+              </div>
+              <div>
+                <p className="font-display text-4xl text-ivory">Ø 3 Tage</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.15em] text-ivory/40">
+                  Vorsprung vor Portalen
+                </p>
+              </div>
+              <div>
+                <p className="font-display text-4xl text-ivory">Diskret</p>
+                <p className="mt-2 text-xs uppercase tracking-[0.15em] text-ivory/40">
+                  Keine öffentlichen Anfragen
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
