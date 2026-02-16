@@ -456,7 +456,7 @@ export default function V13Page() {
       <section id="kontakt" className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1600607687920-4e2a12ae1a82?q=80&w=2400&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2400&auto=format&fit=crop"
             alt="Kontakt WEID Immobilien"
             fill
             className="object-cover"

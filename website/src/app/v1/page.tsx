@@ -21,7 +21,7 @@ const images = {
     "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop",
   team: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=1400&auto=format&fit=crop",
   ctaBg:
-    "https://images.unsplash.com/photo-1600607687920-4e2a12ae1a82?q=80&w=2400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2400&auto=format&fit=crop",
 };
 
 /* ─── Data ─── */
@@ -144,8 +144,8 @@ export default function V1HomePage() {
           </Reveal>
           <Reveal variant="left" delay={200}>
             <p className="mt-8 max-w-md text-[15px] leading-relaxed text-taupe">
-              Seit 2009 in Erlangen. Über 240 vermittelte Objekte. 
-              Wir kennen jeden Stadtteil, haben 500+ vorgemerkte Käufer 
+              Seit 2009 in Erlangen. Über 240 vermittelte Objekte.
+              Wir kennen jeden Stadtteil, haben 500+ vorgemerkte Käufer
               und begleiten Sie bis zum Notar.
             </p>
           </Reveal>
@@ -384,8 +384,8 @@ export default function V1HomePage() {
           </Reveal>
           <Reveal delay={100}>
             <p className="mx-auto mt-8 max-w-xl text-[15px] leading-relaxed text-ivory/60">
-              70% unserer Immobilien werden verkauft, bevor sie auf ImmoScout 
-              oder Immowelt erscheinen. Unser Netzwerk aus vorgemerkten Käufern 
+              70% unserer Immobilien werden verkauft, bevor sie auf ImmoScout
+              oder Immowelt erscheinen. Unser Netzwerk aus vorgemerkten Käufern
               erfährt zuerst davon – oft Tage vor allen anderen.
             </p>
           </Reveal>
@@ -448,13 +448,13 @@ export default function V1HomePage() {
                 <span className="italic">Verbindlich.</span>
               </h2>
               <p className="mt-6 text-[15px] leading-relaxed text-taupe">
-                Wir sind kein Franchise und keine Maklerkette. WEID ist ein 
-                inhabergeführtes Büro in Erlangen, das seit 2009 Eigentümer 
+                Wir sind kein Franchise und keine Maklerkette. WEID ist ein
+                inhabergeführtes Büro in Erlangen, das seit 2009 Eigentümer
                 und Käufer zusammenbringt. Persönlich, nicht anonym.
               </p>
               <p className="mt-4 text-[15px] leading-relaxed text-taupe">
-                Unser Vorteil: Wir kennen jeden Stadtteil. Wissen, was eine 
-                Wohnung am Röthelheimpark von einer am Burgberg unterscheidet. 
+                Unser Vorteil: Wir kennen jeden Stadtteil. Wissen, was eine
+                Wohnung am Röthelheimpark von einer am Burgberg unterscheidet.
                 Und haben die Kontakte, die den Unterschied machen.
               </p>
               <div className="mt-8">
@@ -489,8 +489,8 @@ export default function V1HomePage() {
                   <span className="italic">beginnt hier.</span>
                 </h2>
                 <p className="mt-8 max-w-lg text-[15px] leading-relaxed text-ivory/60">
-                  Sie denken über einen Verkauf nach? Oder suchen eine Einschätzung, 
-                  was Ihre Immobilie am Burgberg oder in Bruck heute wert ist? 
+                  Sie denken über einen Verkauf nach? Oder suchen eine Einschätzung,
+                  was Ihre Immobilie am Burgberg oder in Bruck heute wert ist?
                   Lassen Sie uns unverbindlich sprechen.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
@@ -609,7 +609,7 @@ export default function V1HomePage() {
       <div className="fixed bottom-4 left-4 z-50 rounded bg-noir/80 px-3 py-1.5 text-[10px] uppercase tracking-wider text-ivory/60">
         V1 — Split Hero
       </div>
-    
+
       <VersionNav current={1} />
       <BuyerPopup />
     </main>
